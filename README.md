@@ -7,6 +7,6 @@ These scripts are very new and there is much work to do.
 3. Iterate through each CSV and create a 'clean' version of the file.
 4. Append the clean files into a database table.
 5. Convert table for each state to a feature class
-6. Create a composite geocode locator for each state's feature class.
+6. Create a composite geocode locator for each state.
 
 This is a work in progress.
