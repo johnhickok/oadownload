@@ -1,8 +1,9 @@
 # script extracts all zipfiles in the folder into us/ca
+# this script will need to expand if expanding into multiple states
+
 import os, glob
 from zipfile import ZipFile
 
-# os.chdir("/mydir")
 for file in glob.glob("*.zip"):
   file_csv = 'us/ca/' + file.split('.')[0] + '.csv'
   with ZipFile(file, 'r') as zip:

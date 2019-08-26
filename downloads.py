@@ -1,3 +1,4 @@
+# this script is superceded and does not work - for reference only
 
 import csv, urllib.request
 
