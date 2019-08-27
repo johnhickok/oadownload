@@ -1,0 +1,123 @@
+The URLs can be obtained from openaddress.io's plain text summary
+See http://results.openaddresses.io/
+
+As a shortcut, I used wget for Windows at http://gnuwin32.sourceforge.net/
+
+Your OS might prevent long batchfile downloads. I copy/pasted about ten at a time.
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664410/us/ca/alameda.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/585443/us/ca/alpine.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665577/us/ca/amador.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665749/us/ca/berkeley.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665018/us/ca/butte.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664574/us/ca/calaveras.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664348/us/ca/city_of_anaheim.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664624/us/ca/city_of_bakersfield.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666582/us/ca/city_of_bishop.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664837/us/ca/city_of_brea.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665389/us/ca/city_of_burbank.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665390/us/ca/city_of_carson.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666086/us/ca/city_of_culver_city.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665702/us/ca/city_of_cupertino.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665227/us/ca/city_of_elk_grove.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666402/us/ca/city_of_emeryville.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666313/us/ca/city_of_eureka.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665551/us/ca/city_of_fullerton.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665974/us/ca/city_of_garden_grove.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/432985/us/ca/city_of_hayward.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665882/us/ca/city_of_hermosa_beach.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665148/us/ca/city_of_huntington_beach.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665063/us/ca/city_of_irvine.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666553/us/ca/city_of_jackson.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666373/us/ca/city_of_kerman.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665444/us/ca/city_of_laguna_niguel.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/649449/us/ca/city_of_lake_forest.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665391/us/ca/city_of_lancaster.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664534/us/ca/city_of_long_beach.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664356/us/ca/city_of_los_angeles.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/397409/us/ca/city_of_manteca.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/411203/us/ca/city_of_mountain_view.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665671/us/ca/city_of_newport_beach.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665042/us/ca/city_of_orange.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666232/us/ca/city_of_oroville.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665622/us/ca/city_of_palo_alto.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666403/us/ca/city_of_piedmont.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/353793/us/ca/city_of_rancho_cucamonga.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665784/us/ca/city_of_redlands.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665268/us/ca/city_of_riverside.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/565585/us/ca/city_of_roseville.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664491/us/ca/city_of_san_diego.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664450/us/ca/city_of_san_jose.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/655722/us/ca/city_of_san_jose2.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666343/us/ca/city_of_san_juan_capistrano.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665819/us/ca/city_of_san_luis_obispo.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665269/us/ca/city_of_santa_clara.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665392/us/ca/city_of_santa_cruz.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666284/us/ca/city_of_south_lake_tahoe.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665070/us/ca/city_of_sunnyvale.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665216/us/ca/city_of_temecula.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/511995/us/ca/city_of_visalia.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665361/us/ca/city_of_walnut_creek.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665835/us/ca/city_of_west_sacramento.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666002/us/ca/city_of_whittier.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/626975/us/ca/colusa.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/410067/us/ca/contra_costa.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665928/us/ca/del_norte.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664864/us/ca/el_dorado.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664608/us/ca/fresno.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/657236/us/ca/glenn.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/473026/us/ca/humboldt.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/583892/us/ca/imperial.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665914/us/ca/inyo.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664524/us/ca/kern.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665372/us/ca/kings.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665496/us/ca/lake.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665750/us/ca/lassen.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665765/us/ca/madera.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664791/us/ca/marin.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/549376/us/ca/mariposa.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664742/us/ca/mendocino.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664772/us/ca/merced.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/584471/us/ca/modoc.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665507/us/ca/mono.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664931/us/ca/monterey.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665352/us/ca/napa.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664932/us/ca/nevada.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664458/us/ca/orange.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665033/us/ca/placer.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666374/us/ca/plumas.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664344/us/ca/riverside.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/345907/us/ca/sacramento.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666174/us/ca/san_benito.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/418566/us/ca/san_bernardino.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664248/us/ca/san_diego.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664790/us/ca/san_francisco.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/142025/us/ca/san_joaquin.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664918/us/ca/san_luis_obispo.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/77352/us/ca/san_mateo.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/60239/us/ca/santa_barbara.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664556/us/ca/santa_clara.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665445/us/ca/santa_cruz.zip
+
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665206/us/ca/shasta.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666314/us/ca/siskiyou.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664488/us/ca/solano.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664812/us/ca/sonoma.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/655972/us/ca/stanislaus.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665540/us/ca/sutter.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/483029/us/ca/tehama.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666087/us/ca/trinity.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664426/us/ca/tulare.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664761/us/ca/tuolumne.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/664715/us/ca/ventura.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/665149/us/ca/yolo.zip
+wget --no-check-certificate https://s3.amazonaws.com/data.openaddresses.io/runs/666060/us/ca/yuba.zip
+
+

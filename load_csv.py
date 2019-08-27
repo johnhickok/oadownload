@@ -1,17 +1,17 @@
-# script imports csv files into geodatabase table
+# script imports csv files from openaddresses.io (oa) into an Esri file
+# geodatabase. You will need ArcGIS Pro and the Python 3.x environment
 import arcpy
 import glob, os
 
 arcpy.env.workspace = os.getcwd()
 
-
+# Create a file geodatabase load.gdb in the current working directory.
 arcpy.CreateFileGDB_management(os.getcwd(), 'load.gdb')
 
+# Create a table and add fields to match oa 
+arcpy.CreateTable_management('load.gdb', 'table1')
 
-arcpy.CreateTable_management('load.gdb', 'table3')
-
-in_table = 'load.gdb/table3'
-
+in_table = 'load.gdb/table1'
 arcpy.AddField_management(in_table, 'LON', 'DOUBLE')
 arcpy.AddField_management(in_table, 'LAT', 'DOUBLE')
 arcpy.AddField_management(in_table, 'NUMBER',   'TEXT', '', '', 30)
@@ -22,23 +22,24 @@ arcpy.AddField_management(in_table, 'DISTRICT', 'TEXT', '', '', 100)
 arcpy.AddField_management(in_table, 'REGION',   'TEXT', '', '', 100)
 arcpy.AddField_management(in_table, 'POSTCODE', 'TEXT', '', '', 20)
 
-
 # field names used by search and insert cursors
 field_names = ['LON','LAT','NUMBER','STREET','UNIT','CITY','DISTRICT','REGION','POSTCODE']
 
-# search and insert cursors
+# set an insert cursor
 insert_cursor = arcpy.da.InsertCursor(in_table, field_names)
 
-# a better structure will be to iterate files into a cleaned up csv
+# Desktop software is easy to use, but with over 13 million records, desktop
+# software will take a while. Please consider using PostGIS.
+# An improved script will iterate files into a cleaned up csv
 # then use pgsql to copy/append the clean file into postgres
-# use postgres to convert to geospatial table
-# convert coordinates to geometry, ref: https://postgis.net/docs/ST_MakePoint.html
 
 # cleanup needed:
 # convert lat, lon values to float as a test
 # verify lat and lon values are reasonably within min/max for California
 # verify street names and house numbers have values
 
+# iterate through csv's in the california (ca) folder. You will need to either copy
+# the ca folder into the same folder this script runs in, or change the next line below.
 
 for file_csv in glob.glob("ca/*.csv"):
   print('Importing ' + file_csv + ' ...')
@@ -50,3 +51,12 @@ for file_csv in glob.glob("ca/*.csv"):
   except:
     print('bad data in ' + file_csv)
 del insert_cursor
+
+# Postgres is great for finding and removing buggy records once your table is uploaded.
+
+# To use postgres to convert to convert coordinates to geometry
+# ref: https://postgis.net/docs/ST_MakePoint.html
+
+# To convert from WGS84 (4326) to CCS State Plane Zone 5 (2229), 
+# consider https://postgis.net/docs/ST_Transform.html
+
