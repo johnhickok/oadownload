@@ -18,4 +18,4 @@ These last two scripts might be useful:
   <li><b>move_zip.py</b>: creates a folder 'zip' and moves all your files there</li>
 </ul>
 
-This small project is a quick fix for now. <a href="https://pelias.io/">Pelias</a>, anyone?
+This small project is a quick fix to supplement our current geocoding workflows. <a href="https://pelias.io/">Pelias</a>, anyone?
