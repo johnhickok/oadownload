@@ -13,6 +13,7 @@ The psycopg2 library needs to be installed in addition to the standard libraries
 8. in ArcGIS Pro, import your final PostGIS table as a feature class and <a heref="https://pro.arcgis.com/en/pro-app/help/data/geocoding/create-a-locator.htm">create your locator file</a>.
 
 These last two scripts might be useful:
-<b>csv_numlines.py</b>: outputs your CSVs along with number of rows in each file
-<b>move_zip.py</b>: creates a folder 'zip' and moves all your files there
-
+<ul>
+  <li><b>csv_numlines.py</b>: outputs your CSVs along with number of rows in each file</li>
+  <li><b>move_zip.py</b>: creates a folder 'zip' and moves all your files there</li>
+</ul>
