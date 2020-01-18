@@ -17,3 +17,5 @@ These last two scripts might be useful:
   <li><b>csv_numlines.py</b>: outputs your CSVs along with number of rows in each file</li>
   <li><b>move_zip.py</b>: creates a folder 'zip' and moves all your files there</li>
 </ul>
+
+This small project is a quick fix for now. <a href="https://pelias.io/">Pelias</a>, anyone?
