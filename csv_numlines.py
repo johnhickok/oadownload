@@ -11,4 +11,4 @@ def file_len(fname):
 for file_csv in glob.glob("us/ca/*.csv"):
   filename = file_csv[6:]
   num_lines = file_len(file_csv) - 1
-  print filename + ',' + str(num_lines)
+  print(filename + ',' + str(num_lines))

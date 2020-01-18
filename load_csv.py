@@ -1,48 +1,51 @@
-# script imports csv files into geodatabase table
-import arcpy
-import glob, os
+import os, csv, psycopg2, glob, my_postgres_credentials
 
-arcpy.env.workspace = os.getcwd()
+this_folder = os.getcwd()
 
-arcpy.CreateFileGDB_management(os.getcwd(), 'load.gdb')
+# set up postgres connection string from values you updated in 
+# my_postgres_credentials.py
+connect_string = ''
+connect_string += 'dbname=' + my_postgres_credentials.dbname + ' '
+connect_string += 'user=' + my_postgres_credentials.user + ' '
+connect_string += 'password=' + my_postgres_credentials.password
 
-arcpy.CreateTable_management('load.gdb', 'table3')
+# Connect to PostGIS
+connection = psycopg2.connect(connect_string)
+cursor = connection.cursor()
 
-in_table = 'load.gdb/table3'
+# create table
+psql_table_create = """
+CREATE TABLE public.oa_california_text
+(
+    myid serial,
+    lon character varying(100),
+    lat character varying(100),
+    number character varying(100),
+    street character varying(200),
+    unit character varying(100),
+    city character varying(200),
+    district character varying(100),
+    region character varying(100),
+    postcode character varying(100),
+    id character varying(100),
+	hash character varying(100),
+    src character varying(150)
+);
+"""
+cursor.execute(psql_table_create)
+cursor.execute("commit")
 
-arcpy.AddField_management(in_table, 'LON', 'DOUBLE')
-arcpy.AddField_management(in_table, 'LAT', 'DOUBLE')
-arcpy.AddField_management(in_table, 'NUMBER',   'TEXT', '', '', 30)
-arcpy.AddField_management(in_table, 'STREET',   'TEXT', '', '', 200)
-arcpy.AddField_management(in_table, 'UNIT',     'TEXT', '', '', 20)
-arcpy.AddField_management(in_table, 'CITY',     'TEXT', '', '', 200)
-arcpy.AddField_management(in_table, 'POSTCODE', 'TEXT', '', '', 20)
-
-# field names used by search and insert cursors
-field_names = ['LON','LAT','NUMBER','STREET','UNIT','CITY','POSTCODE']
-
-# search and insert cursors
-insert_cursor = arcpy.da.InsertCursor(in_table, field_names)
-
-# a better structure will be to iterate files into a cleaned up csv
-# then use pgsql to copy/append the clean file into postgres
-# use postgres to convert to geospatial table
-# convert coordinates to geometry, ref: https://postgis.net/docs/ST_MakePoint.html
-
-# cleanup needed:
-# convert lat, lon values to float as a test
-# verify lat and lon values are reasonably within min/max for California
-# verify street names and house numbers have values
-# ogr2ogr -f "PostgreSQL" PG:"host=[your host] user=[your user name] dbname=[your database] password=[your password]" bigfile.csv
-
-# Load data into file geodatabase
+# for each csv from openaddresses, copy values into the above table, then
+# populate the field src with the source csv file
 for file_csv in glob.glob("us/ca/*.csv"):
-  print('Importing ' + file_csv + ' ...')
-  try:
-    search_cursor = arcpy.da.SearchCursor(file_csv, field_names)
-    for row in search_cursor:
-      insert_cursor.insertRow(row)
-    del search_cursor
-  except:
-    print('bad data in ' + file_csv)
-del insert_cursor
+  file_name = file_csv[6:]
+  copy_string = "copy oa_california_text (lon,lat,number,street,unit,city,"
+  copy_string += "district,region,postcode,id,hash) FROM "
+  copy_string += "'" + this_folder + "/us/ca/" + file_name + "' "
+  copy_string += "DELIMITER ',' CSV HEADER ENCODING 'UTF8' QUOTE '\"' ESCAPE '''';"
+  update_srs = "update oa_california_text set src = "
+  update_srs += "'" + file_name + "' where src is null;"
+  print("copying " + file_name + " ...")
+  cursor.execute(copy_string)
+  cursor.execute(update_srs)
+  cursor.execute("commit")

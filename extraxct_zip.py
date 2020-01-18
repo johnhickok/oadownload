@@ -1,5 +1,4 @@
 # script extracts all zipfiles in the folder into us/ca
-# this script will need to expand if expanding into multiple states
 
 import os, glob
 from zipfile import ZipFile
