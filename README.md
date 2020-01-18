@@ -7,7 +7,7 @@ It is assumed the user is familiar with Python, PostGIS and pgAdmin geoprocessin
 2. Run <b>extraxct_zip.py</b> to extract CSV files from ZIP files.
 3. Use pgAdmin to create a PostGres database for your tables.
 4. Update <b>my_postgres_credentials.py</b> with your postgres database name, user, and password.
-5. Run <b>load_csv.py</b> to create and populate a table oa_california_text from your CSVs.
+5. Run <b>load_csv.py</b> to create and populate a table oa_california_text from the CSV files you downloaded.
 6. In pgAdmin, run the statements in <b>cleanup.sql</b>. Copy/pasting indivdual statements is best practice for new users.
 7. In pgAdmin run <b>gis.sql</b>	for converting your final geospatial tables.
 8. in ArcGIS Pro, import your final PostGIS table as a feature class and <a heref="https://pro.arcgis.com/en/pro-app/help/data/geocoding/create-a-locator.htm">create your locator file</a>.
