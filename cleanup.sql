@@ -33,7 +33,7 @@ update oa_california_text set city = upper(replace(replace(replace(src, 'city_of
 where src like 'city_of%' and city is null;
 
 -- street numbers with non numeric text
-delete from oa_california_text where 
+delete from oa_california_text where
 number like '-'
 or number like '?'
 or number like '['
