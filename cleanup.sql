@@ -1,5 +1,6 @@
 /*
-The statements below can be used for some basic cleanup of the 80 or so files reoresenting addresses across California posted on openaddresses.io.
+The statements below can be used for some basic cleanup of the 80 or so files reoresenting addresses across 
+California posted on openaddresses.io.
 */
 -- you'll want to copy/paste the lines into pgAdmin's query tool
 
