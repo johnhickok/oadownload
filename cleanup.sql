@@ -1,14 +1,6 @@
 /*
-1. create initial table
-2. load all the csvs from open addresses
-3. create well documented sql file for removing dirty data
-4. create geo table (epsg: 4326) 
-5. create spatial index
-6. project table (epsg: 2229)
-7. create spatial index
-8. 
+The statements below can be used for some basic cleanup of the 80 or so files reoresenting addresses across California posted on openaddresses.io.
 */
-
 -- you'll want to copy/paste the lines into pgAdmin's query tool
 
 vacuum analyze;
