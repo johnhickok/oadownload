@@ -1,7 +1,7 @@
 # oadownload
 Python 3.x scripts used for downloading and cleaning up CSV's from <a href="https://openaddresses.io/">openaddresses.io</a>
 
-It is assumed the user is familiar with Python, PostGIS and pgAdmin geoprocessing tools. The <a href="https://pypi.org/project/psycopg2/">psycopg2</a> library needs to be installed for working with PostgreSQL. If the user has access to Esri's ArcGIS Pro, an Esri-based geocode locator file can be created with the results.
+It is assumed the user is familiar with Python, PostGIS and pgAdmin to use these scripts. The <a href="https://pypi.org/project/psycopg2/">psycopg2</a> Python library needs to be installed for working with PostgreSQL. If the user has access to Esri's ArcGIS Pro, an Esri-based geocode locator file can be created with the files you download and process.
 
 1. Run <b>download_cal.py</b> to download everthing in California except Los Angeles County into the folder these scripts will be used.
 2. Run <b>extraxct_zip.py</b> to extract CSV files from ZIP files.
