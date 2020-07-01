@@ -8,8 +8,8 @@ It is assumed the user is familiar with Python, PostGIS and pgAdmin to use these
 3. Use pgAdmin to create a PostGreSQL database for your tables.
 4. Update <b>my_postgres_credentials.py</b> with your postgreSQL database name, user, and password.
 5. Run <b>load_csv.py</b> to create and populate a table oa_california_text from the CSV files you downloaded.
-6. In pgAdmin, run the statements in <b>cleanup.sql</b>. Copy/pasting indivdual statements is best practice for new users.
-7. In pgAdmin run <b>gis.sql</b>	for converting your final geospatial tables.
+6. In pgAdmin, run the statements in <b>pg_cleanup.sql</b>. Copy/pasting indivdual statements is best practice for new users.
+7. In pgAdmin run <b>pg_gis.sql</b>	for converting oa_california_text to a geospatial table.
 8. in ArcGIS Pro, import your final PostGIS table as a feature class and <a heref="https://pro.arcgis.com/en/pro-app/help/data/geocoding/create-a-locator.htm">create your locator file</a>.
 
 These last two scripts might be useful:
