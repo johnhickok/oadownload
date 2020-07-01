@@ -13,7 +13,6 @@ with open('state.txt', encoding = 'utf8') as csvfile:
   for row in reader:
       if (row['source'][0:5]) == 'us/ca' \
       and row['processed'] != '' \
-      # remark out the line below if you want to include Los Angeles County
       and row['source'][0:17] != 'us/ca/los_angeles':
         country, state, json = row['source'].split('/')
         filename = json.split('.')[0] + '.zip'

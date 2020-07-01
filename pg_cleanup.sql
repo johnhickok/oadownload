@@ -7,6 +7,8 @@ California posted on openaddresses.io.
 vacuum analyze;
 
 select count(*) from oa_california_text;
+--9593685
+--8808841
 
 -- no street name or number
 delete from oa_california_text where street is null;
@@ -17,8 +19,8 @@ delete from oa_california_text where lat !~ '^[0-9\.]+$';
 delete from oa_california_text where lon !~ '^[-+]?[0-9]*\.?[0-9]+$';
 
 -- lat/lon values outside of California (obvious location errors)
-select * from oa_california_text where cast(lat as double precision) NOT BETWEEN 32.4 AND 42.5;
-select * from oa_california_text where cast(LON as double precision) NOT BETWEEN -124.7 AND -113.8;
+delete from oa_california_text where cast(lat as double precision) NOT BETWEEN 32.4 AND 42.5;
+delete from oa_california_text where cast(LON as double precision) NOT BETWEEN -124.7 AND -113.8;
 
 -- city values with '(Unincorp)' - Sonoma County
 update oa_california_text set city = trim(replace(city, '(Unincorp)', '')) where city like '%(Unincorp)%';
